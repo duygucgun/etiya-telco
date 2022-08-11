@@ -8,14 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ToolbarModule} from 'primeng/toolbar';
 import { ServicesRoutingModule } from './services-routing.module';
 import { ServiceFormComponent } from './components/service-form/service-form.component';
-import { ServiceListComponent } from './components/service-list/service-list.component';
 import { InputTextModule } from 'primeng/inputtext';
+import { ServiceDashboardComponent } from './components/service-dashboard/service-dashboard.component';
 
 
 @NgModule({
   declarations: [
-    ServiceListComponent,
-    ServiceFormComponent
+    ServiceFormComponent,
+    ServiceDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +29,7 @@ import { InputTextModule } from 'primeng/inputtext';
     InputTextModule,
     ReactiveFormsModule,
     FormsModule
-  ]
+  ],
+  exports:[ServiceDashboardComponent]
 })
 export class ServicesModule { }
