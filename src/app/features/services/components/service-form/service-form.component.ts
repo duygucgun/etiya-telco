@@ -79,7 +79,7 @@ export class ServiceFormComponent implements OnInit {
     this.serviceService.add(service).subscribe(() =>{
       setTimeout(() => {
         this.messageService.add({severity:'success', summary:'Add', detail:'Service succesfully added!'});
-        this.router.navigateByUrl("service/add");
+        this.router.navigateByUrl("services/add");
       }, 1000);
     })
   }

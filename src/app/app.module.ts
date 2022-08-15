@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { FeaturesModule } from './features/features.module';
-import { ServicesModule } from './features/services/services.module';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from './core/core.module';
+import { OverlayLoadingInterceptor } from './core/interceptors/overlay-loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FeaturesModule,
     HttpClientModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoreModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, 
+    {provide: HTTP_INTERCEPTORS, useClass: OverlayLoadingInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

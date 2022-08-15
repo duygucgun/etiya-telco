@@ -10,6 +10,8 @@ import { ServicesRoutingModule } from './services-routing.module';
 import { ServiceFormComponent } from './components/service-form/service-form.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ServiceDashboardComponent } from './components/service-dashboard/service-dashboard.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { ServiceDashboardComponent } from './components/service-dashboard/servic
     ToolbarModule,
     InputTextModule,
     ReactiveFormsModule,
-    FormsModule
+    SharedModule,
+    CoreModule
   ],
   exports:[ServiceDashboardComponent]
 })

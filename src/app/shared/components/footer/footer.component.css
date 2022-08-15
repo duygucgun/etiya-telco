@@ -3,26 +3,26 @@
 
 section .section-title {
     text-align: center;
-    color: #720583;
+    color: #156064;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 #footer {
     position: relative;
     bottom: 0;
-    background: #720583 !important;
+    background: #156064 !important;
     width: 100%;
     margin-top: 20px;
 }
 #footer h5{
     padding-left: 10px;
-    border-left: 3px solid #eeeeee;
+    border-left: 3px solid #DCDCDD;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    color:#ffffff;
+    color:#DCDCDD;
 }
 #footer a {
-    color: #ffffff;
+    color: #DCDCDD;
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
@@ -43,10 +43,10 @@ section .section-title {
 }
 #footer ul.social li a,
 #footer ul.quick-links li a{
-    color:#ffffff;
+    color:#DCDCDD;
 }
 #footer ul.social li a:hover{
-    color:#eeeeee;
+    color:#DCDCDD;
 }
 #footer ul.quick-links li{
     padding: 3px 0;
